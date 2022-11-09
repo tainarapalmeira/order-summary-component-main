@@ -1,0 +1,152 @@
+/* || CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: 0;
+    box-sizing: border-box;
+    font-family: "Red Hat Display";
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+    line-height: 0;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+/* || VAR DECLARATIONS */
+:root {
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/* || GENERAL STYLE */
+body {
+    background-image: url(./images/pattern-background-mobile.svg);
+    background-color: var(--pale-blue);
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* || POSITIONING OF CARD ELEMENTS*/
+.container {
+    width: 87.5vw;
+    height: 79.9vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--white);
+    box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.151826);
+}
+
+.image-container {
+    width: 100%;
+    height: 28.5%;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.content-container {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem;
+}
+
+.annual-plan-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 108%;
+    height: 25%;
+    border-radius: 15px;
+    background-color: var(--very-pale-blue);
+    padding: 0.5rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.annual-plan-container img {
+    height: 60%;
+    width: auto;
+}
+
+/*.info-annual-plan-container {
+    font-size: .9rem;
+    padding-right: 3.5rem;
+} */
+
+footer {
+    font-size: 14px;
+    text-align: center;
+}
+
+/* || BUTTON */
+button {
+    width: 108%;
+    height: 3.1rem;
+    background-color: var(--bright-blue);
+    color: var(--white);
+    border-radius: 15px;
+    filter: drop-shadow(0px 1rem 6px rgba(112, 121, 238, 0.245));
+    text-align: center;
+}
+
+/* || TYPOGRAPHY */
+.bold {
+    font-weight: 700;
+}
+
+.bolder {
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 1.35rem;
+}
+
+p,
+a {
+    text-align: center;
+    color: var(--desaturated-blue);
+}
+
+.font-style {
+    font-size: .8rem;
+    text-decoration: underline;
+}
+
+.style-color {
+    color: var(--dark-blue);
+}
+
+/* || MEDIA QUERY - Desktop version*/
+@media only screen and (min-width: 1200px) {
+    .container {
+        height: 60vh;
+        width: 20vw;
+    }    
+}
